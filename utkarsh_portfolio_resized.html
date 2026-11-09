@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utkarsh Mishra | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f4ef;
+            color: #171717;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 90%;
+            margin: auto;
+        }
+
+        /* NAVBAR */
+
+        header {
+            padding: 22px 0;
+            border-bottom: 1px solid #dddcd5;
+            position: sticky;
+            top: 0;
+            background: #f5f4ef;
+            z-index: 10;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 900;
+        }
+
+        .logo span {
+            color: #a0bb42;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            font-size: 13px;
+            color: #555;
+        }
+
+        .nav-links a:hover {
+            color: #91a936;
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            min-height: 570px;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+            align-items: center;
+            gap: 35px;
+            padding: 65px 0;
+            overflow: hidden;
+        }
+
+        .hero > div:first-child {
+            min-width: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tagline {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #777;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 6.5vw, 92px);
+            line-height: 0.98;
+            letter-spacing: -5px;
+            margin: 25px 0;
+            overflow-wrap: anywhere;
+        }
+
+        .hero h1 span {
+            color: #a0bb42;
+        }
+
+        .hero p {
+            color: #555;
+            max-width: 580px;
+            font-size: 16px;
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 22px;
+            background: #20211e;
+            color: white;
+            border-radius: 30px;
+            font-size: 13px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #171717;
+            border: 1px solid #aaa;
+        }
+
+        /* PROFILE IMAGE */
+
+        .profile {
+            position: relative;
+            isolation: isolate;
+            min-width: 0;
+            width: 100%;
+            min-height: 470px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            background: transparent;
+            transform: none;
+            overflow: visible;
+        }
+
+        /* Lime organic shape behind portrait */
+
+     /* Soft, elegant background behind your portrait */
+
+.profile::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+
+    width: 85%;
+    height: 85%;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 45% 55% 35% 65%;
+
+    background: linear-gradient(
+        145deg,
+        #e8eadf 0%,
+        #d6dfc9 55%,
+        #c7d1b9 100%
+    );
+}
+
+/* Subtle decorative background */
+
+.profile::after {
+    content: "";
+    position: absolute;
+    z-index: -3;
+
+    width: 90%;
+    height: 90%;
+
+    top: 55%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #ece9df;
+}
+
+        .profile-inner {
+            position: relative;
+            width: 100%;
+            max-width: 460px;
+            height: auto;
+            border: 0;
+            overflow: visible;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .profile-photo {
+            display: block;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 460px;
+            height: auto;
+            max-height: 560px;
+            object-fit: contain;
+            object-position: center bottom;
+            filter: drop-shadow(0 16px 16px rgba(28, 29, 24, .10));
+        }
+
+        .profile-label {
+            position: absolute;
+            z-index: 2;
+            right: 0;
+            bottom: 34px;
+            padding: 11px 16px;
+            border: 1px solid #20211e;
+            border-radius: 999px;
+            background: #f5f4ef;
+            color: #20211e;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            box-shadow: 5px 5px 0 #20211e;
+        }
+
+        /* GENERAL SECTIONS */
+
+        section {
+            padding: 75px 0;
+            border-top: 1px solid #deddd6;
+        }
+
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 35px;
+        }
+
+        .section-heading h2 {
+            font-size: 38px;
+            letter-spacing: -2px;
+        }
+
+        .section-heading span {
+            font-size: 11px;
+            color: #888;
+            letter-spacing: 2px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border: 1px solid #e4e3dc;
+            border-radius: 18px;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+        }
+
+        /* PROJECTS */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .project-card {
+            background: white;
+            border: 1px solid #e4e3dc;
+            border-radius: 18px;
+            padding: 25px;
+            min-height: 240px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: #a0bb42;
+        }
+
+        .project-number {
+            color: #a0bb42;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .project-card h3 {
+            margin: 22px 0 12px;
+            font-size: 21px;
+        }
+
+        .project-card p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* EDUCATION */
+
+        .education-item {
+            padding: 25px 0;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .education-item p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* SKILLS */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .skill-tags li {
+            padding: 9px 15px;
+            border: 1px solid #deddd6;
+            background: #f5f4ef;
+            border-radius: 30px;
+            font-size: 13px;
+        }
+
+        /* TABLES */
+
+        .table-wrapper {
+            overflow-x: auto;
+            background: white;
+            border-radius: 15px;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 550px;
+        }
+
+        th,
+        td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid #e5e5e5;
+            font-size: 13px;
+        }
+
+        th {
+            background: #e9e8e0;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* CAREER GOALS */
+
+        .goal-box {
+            background: #20211e;
+            color: white;
+            padding: 40px;
+            border-radius: 22px;
+        }
+
+        .goal-box h3 {
+            font-size: 30px;
+            margin: 15px 0;
+        }
+
+        .goal-box p {
+            color: #ccc;
+            max-width: 750px;
+        }
+
+        /* ACHIEVEMENTS */
+
+        .achievement {
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .achievement h3 {
+            font-size: 17px;
+        }
+
+        .achievement p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* CONTACT */
+
+        .contact-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-links a {
+            padding: 12px 20px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 13px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 30px 0;
+            color: #777;
+            font-size: 12px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 750px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 55px 0;
+                gap: 35px;
+            }
+
+            .profile {
+                min-height: 390px;
+                margin: 5px auto 0;
+                width: min(100%, 420px);
+            }
+
+            .profile::before {
+                width: 78%;
+            }
+
+            .profile-photo {
+                max-height: 430px;
+            }
+
+            .profile-label {
+                right: 2px;
+                bottom: 22px;
+                font-size: 9px;
+                padding: 9px 12px;
+            }
+
+            .hero h1 {
+                letter-spacing: -3px;
+            }
+
+            .about-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-heading h2 {
+                font-size: 29px;
+            }
+
+            .education-item {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">UM<span>.</span></a>
+
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#education">Education</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- HERO SECTION -->
+
+        <div class="hero">
+
+            <div>
+                <p class="tagline">Student / Technology Enthusiast</p>
+
+                <h1>Utkarsh<br>Mishra<span>.</span></h1>
+
+                <p>
+                    Aspiring cybersecurity professional with a strong
+                    interest in ethical hacking, AI/ML and problem-solving.
+                    Currently building a foundation in programming,
+                    Linux and cybersecurity through hands-on practice
+                    and technical projects.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn">Contact Me</a>
+
+                    <a href="#projects" class="btn btn-outline">
+                        Explore Projects
+                    </a>
+                </div>
+            </div>
+
+            <!-- PROFILE PHOTO -->
+
+            <div class="profile">
+                <div class="profile-inner">
+                    <img
+                        src="https://res.cloudinary.com/naak3ovw/image/upload/e_background_removal/file_0000000090b08211847e3bf010d4462e.png"
+                        alt="Utkarsh Mishra"
+                        class="profile-photo"
+                    >
+                </div>
+
+                <span class="profile-label">Cybersecurity · AI/ML</span>
+            </div>
+
+        </div>
+
+        <!-- ABOUT ME -->
+
+        <section id="about">
+
+            <div class="section-heading">
+                <h2>About Me</h2>
+                <span>01 / INTRODUCTION</span>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="card">
+                    <p>
+                        I am an aspiring cybersecurity professional
+                        interested in ethical hacking, AI/ML and
+                        technology-driven problem-solving.
+
+                        I enjoy exploring new technologies,
+                        developing practical skills and learning
+                        through hands-on projects.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Quick Information</h3>
+
+                    <p><strong>Location:</strong> Patna, Bihar</p>
+                    <p><strong>Course:</strong> B.Tech CSE (AI-ML)</p>
+
+                    <p>
+                        <strong>Institute:</strong>
+                        Quad AI School of Technology and Management
+                    </p>
+
+                    <p><strong>Interests:</strong> Cybersecurity, AI/ML</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+
+        <section id="projects">
+
+            <div class="section-heading">
+                <h2>Selected Projects</h2>
+                <span>02 / WORK</span>
+            </div>
+
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <span class="project-number">01</span>
+                    <h3>E-Spark</h3>
+                    <p>Focus & Learning App</p>
+
+                    <p>
+                        Combines app-restricted Focus Mode,
+                        doubt solving and quizzes for
+                        distraction-free learning.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <span class="project-number">02</span>
+                    <h3>Ground Report</h3>
+                    <p>Hyperlocal News & Reporting App</p>
+
+                    <p>
+                        A local news platform accepting
+                        live-captured media or content
+                        captured within the last four hours.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <span class="project-number">03</span>
+                    <h3>CodeRoom</h3>
+                    <p>Privacy-Focused Chat Web App</p>
+
+                    <p>
+                        A chat platform featuring temporary
+                        rooms, anonymous modes and
+                        customizable message deletion.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+
+        <section id="education">
+
+            <div class="section-heading">
+                <h2>Education</h2>
+                <span>03 / LEARNING</span>
+            </div>
+
+            <div class="education-item">
+                <div>
+                    <h3>B.Tech — CSE (AI-ML)</h3>
+                    <p>Quad AI School of Technology and Management</p>
+                </div>
+
+                <span>Currently Pursuing</span>
+            </div>
+
+            <div class="education-item">
+                <div>
+                    <h3>Class XII</h3>
+                    <p>Aims International Senior Secondary School / CBSE</p>
+                </div>
+
+                <span>2025</span>
+            </div>
+
+            <div class="education-item">
+                <div>
+                    <h3>Class X</h3>
+                    <p>Aims International Senior Secondary School / CBSE</p>
+                </div>
+
+                <span>2023</span>
+            </div>
+
+        </section>
+
+        <!-- SKILLS -->
+
+        <section id="skills">
+
+            <div class="section-heading">
+                <h2>Skills & Interests</h2>
+                <span>04 / TOOLKIT</span>
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="card">
+                    <h3>Technical Skills</h3>
+
+                    <ul class="skill-tags">
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>Linux</li>
+                        <li>Kali Linux</li>
+                        <li>Parrot OS</li>
+                        <li>OSINT</li>
+                        <li>SQL Injection</li>
+                        <li>OWASP Fundamentals</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Networking</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Soft Skills & Hobbies</h3>
+
+                    <ul class="skill-tags">
+                        <li>Team Leadership</li>
+                        <li>Collaboration</li>
+                        <li>Adaptability</li>
+                        <li>Communication</li>
+                        <li>Problem Solving</li>
+                        <li>Technology Exploration</li>
+                        <li>Chess</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ACADEMIC DETAILS -->
+
+        <section id="academics">
+
+            <div class="section-heading">
+                <h2>Academic Details</h2>
+                <span>05 / COURSEWORK</span>
+            </div>
+
+            <!-- ASSESSMENT SCORES -->
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Assessment</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Mathematics for AI/ML 1</td>
+                            <td>Assessment</td>
+                            <td>20 / 25</td>
+                        </tr>
+
+                        <tr>
+                            <td>Problem Solving using Programming (Python)</td>
+                            <td>Assessment</td>
+                            <td>9 / 9</td>
+                        </tr>
+
+                        <tr>
+                            <td>Employability Skills (Basics)</td>
+                            <td>Assessment</td>
+                            <td>20 / 25</td>
+                        </tr>
+
+                        <tr>
+                            <td>FOCP (JavaScript)</td>
+                            <td>Assessment</td>
+                            <td>7.5 / 9</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- COLLEGE TIMETABLE -->
+
+            <h3 style="margin-top:40px;">College Timetable</h3>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Timing</th>
+                            <th>Subject</th>
+                            <th>Faculty</th>
+                            <th>Tag Along</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>09:00 - 10:00 am</td>
+                            <td>Mathematics For AI/ML 1</td>
+                            <td>Nashit Sir</td>
+                            <td>Nitish Sir</td>
+                        </tr>
+
+                        <tr>
+                            <td>10:00 - 11:00 am</td>
+                            <td>Problem Solving using Programming</td>
+                            <td>Damodar Sir</td>
+                            <td>Nashit Sir</td>
+                        </tr>
+
+                        <tr>
+                            <td>11:00 - 12:00 pm</td>
+                            <td>Employability Skills (Basics)</td>
+                            <td>Akanksha Madam</td>
+                            <td>Damodar Sir</td>
+                        </tr>
+
+                        <tr>
+                            <td>12:00 - 01:00 pm</td>
+                            <td colspan="3" style="text-align:center;">
+                                Lunch Break
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>01:00 - 02:00 pm</td>
+                            <td>FOCP</td>
+                            <td>Nitish Sir</td>
+                            <td>Qaisar Sir</td>
+                        </tr>
+
+                        <tr>
+                            <td>02:00 - 03:00 pm</td>
+                            <td>Frontend Development Basics</td>
+                            <td>Nitish Sir</td>
+                            <td>Damodar Sir</td>
+                        </tr>
+
+                        <tr>
+                            <td>03:00 - 04:00 pm</td>
+                            <td>Group Discussion</td>
+                            <td>Self Study</td>
+                            <td>—</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- ACTIVITIES AND ACHIEVEMENTS -->
+
+        <section id="achievements">
+
+            <div class="section-heading">
+                <h2>Achievements</h2>
+                <span>06 / EXPERIENCE</span>
+            </div>
+
+            <div class="achievement">
+                <h3>BUILD 2026 — Hackyard</h3>
+                <p>
+                    Selected for the final round, associated with IIT Guwahati.
+                </p>
+            </div>
+
+            <div class="achievement">
+                <h3>Cybersecurity Training</h3>
+                <p>
+                    Completed Linux Fundamentals and Module 1 on Hack The Box.
+                </p>
+            </div>
+
+            <div class="achievement">
+                <h3>Robotics Bootcamp</h3>
+                <p>
+                    Hands-on experience in electronics, wiring and RoboCar assembly.
+                </p>
+            </div>
+
+            <div class="achievement">
+                <h3>IoT Practical Sessions</h3>
+                <p>
+                    Participated in practical sessions involving smart technology projects.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- CAREER GOALS -->
+
+        <section id="goals">
+
+            <div class="section-heading">
+                <h2>Career Goals</h2>
+                <span>07 / FUTURE</span>
+            </div>
+
+            <div class="goal-box">
+
+                <p class="tagline" style="color:#d9f36e">
+                    My Direction
+                </p>
+
+                <h3>Securing the Internet, one byte at a time.</h3>
+
+                <p>
+                    My goal is to become a cybersecurity professional
+                    with strong foundations in computer science,
+                    ethical hacking and system security.
+
+                    I aim to understand how digital systems work,
+                    identify vulnerabilities responsibly and
+                    contribute to building safer technologies.
+                    I am also interested in exploring the role
+                    of AI/ML in cybersecurity.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- CONTACT -->
+
+        <section id="contact">
+
+            <div class="section-heading">
+                <h2>Let's Connect</h2>
+                <span>08 / CONTACT</span>
+            </div>
+
+            <div class="card">
+
+                <p>
+                    Interested in technology, cybersecurity
+                    or collaborative projects?
+                    Feel free to connect.
+                </p>
+
+                <div class="contact-links">
+
+                    <a href="mailto:utkarsh.quadju26@medhaviskillsuniversity.edu.in">
+                        Email Me
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/utkarsh-mishra-2a16653ab/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+
+                    <a
+                        href="https://github.com/imutkarshh07"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="container footer-content">
+
+            <p>© Utkarsh Mishra · Academic Year 2026–27</p>
+
+            <p>Designed with HTML & CSS</p>
+
+        </div>
+    </footer>
+
+</body>
+</html>
